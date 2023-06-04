@@ -8,20 +8,20 @@ const App: FC = () => {
 
   const n = Math.floor(Math.random() * 10);
   const threshold = 5;
-  const evenOrOdd = (num: number) => (
+  const evenOrOdd = (num: number, threshold: number) => (
     <div>
-      {n > threshold && (
+      {num > threshold && (
         <p>
-          {n} は {threshold} よりも大きい値です
+          {num} は {threshold} よりも大きい値です
         </p>
       )}
-      {n > threshold || (
+      {num > threshold || (
         <p>
-          {n} は {threshold} 以下の値です
+          {num} は {threshold} 以下の値です
         </p>
       )}
       <p>
-        {n} は {n % 2 === 0 ? '偶数' : '奇数'}です
+        {num} は {num % 2 === 0 ? '偶数' : '奇数'}です
       </p>
     </div>
   );
@@ -30,7 +30,7 @@ const App: FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>{greet(name)}</div>
-        {evenOrOdd(n)}
+        {evenOrOdd(n, threshold)}
       </header>
     </div>
   );
