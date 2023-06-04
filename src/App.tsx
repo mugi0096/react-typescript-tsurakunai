@@ -1,21 +1,16 @@
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { FC } from 'react';
+import logo from './assets/react.svg';
 import './App.css';
 
-function App() {
+const App: FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <h1>Hello World!</h1>
-      </div>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello World!</p>
+      </header>
+    </div>
   );
-}
+};
 
 export default App;
