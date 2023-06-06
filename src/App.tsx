@@ -2,10 +2,9 @@ import { FC } from 'react';
 import logo from './assets/react.svg';
 import './App.css';
 
-const App: FC = () => {
-  const name = 'Patty';
-  const greet = (name: string) => <p>Hello, {name || 'Guest'}!</p>;
+import Greet from './components/Greet/Greet';
 
+const App: FC = () => {
   const n = Math.floor(Math.random() * 10);
   const threshold = 5;
   const evenOrOdd = (num: number, threshold: number) => (
@@ -29,7 +28,7 @@ const App: FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>{greet(name)}</div>
+        <Greet name="Patty" times={n} />
         {evenOrOdd(n, threshold)}
       </header>
     </div>
