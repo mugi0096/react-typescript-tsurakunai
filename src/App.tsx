@@ -3,6 +3,7 @@ import logo from './assets/react.svg';
 import './App.css';
 
 import Greet from './components/Greet/Greet';
+import Summary from './components/Summary/Summary';
 
 const App: FC = () => {
   const n = Math.floor(Math.random() * 10);
@@ -24,13 +25,24 @@ const App: FC = () => {
       </p>
     </div>
   );
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Greet name="Patty" times={n} />
+        <Greet name="Patty" times={1} />
         {evenOrOdd(n, threshold)}
       </header>
+      <Summary title="maple Town">
+        <p>
+          Patty Hope-rabbit, along with her family, arrives in Maple Town, a
+          small town inhabited by friendly animals.
+        </p>
+        <p>
+          Soon, the Rabbit Family settles in Maple Town as mail carriers and the
+          bitter, yet sweet friendship of Patty and Bobby begins to blossom.
+        </p>
+      </Summary>
     </div>
   );
 };
