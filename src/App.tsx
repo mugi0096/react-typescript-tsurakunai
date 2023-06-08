@@ -4,6 +4,7 @@ import './App.css';
 
 import Greet from './components/Greet/Greet';
 import Summary from './components/Summary/Summary';
+import TextInput from './components/TextInput/TextInput';
 
 const App: FC = () => {
   const n = Math.floor(Math.random() * 10);
@@ -43,6 +44,7 @@ const App: FC = () => {
           bitter, yet sweet friendship of Patty and Bobby begins to blossom.
         </p>
       </Summary>
+      <TextInput />
     </div>
   );
 };
