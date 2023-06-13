@@ -34,7 +34,7 @@ const App: FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>{title}</p>
+        <h1>{title}</h1>
         <Greet name="Patty" times={1} />
         {evenOrOdd(n, threshold)}
       </header>
