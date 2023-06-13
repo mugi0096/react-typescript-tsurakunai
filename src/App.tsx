@@ -6,6 +6,9 @@ import Greet from './components/Greet/Greet';
 import Summary from './components/Summary/Summary';
 import TextInput from './components/TextInput/TextInput';
 
+const title = import.meta.env.VITE_APP_TITLE;
+console.dir(import.meta.env);
+
 const App: FC = () => {
   const n = Math.floor(Math.random() * 10);
   const threshold = 5;
@@ -31,6 +34,7 @@ const App: FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>{title}</p>
         <Greet name="Patty" times={1} />
         {evenOrOdd(n, threshold)}
       </header>
