@@ -16,6 +16,11 @@
     "project": ["./tsconfig.json"],
     "sourceType": "module"
   },
-  "plugins": ["react"],
-  "rules": {}
+  "plugins": ["typescript-eslint", "react"],
+  "rules": {},
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
