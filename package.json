@@ -10,7 +10,7 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,html,json,gql,graphql'",
-    "fix": "npm run --silent format; npm run --silent lint:fix",
+    "fix": "yarn install; yarn run --silent format; yarn run --silent lint:fix",
     "preinstall": "npx typesync || :"
   },
   "dependencies": {
@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.40.2",
+    "@types/eslint-config-prettier": "^6.11.0",
+    "@types/prettier": "^2.7.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
