@@ -15,7 +15,8 @@
     "lint:fix": "yarn run --silent lint:style:fix; yarn run --silent lint:es:fix",
     "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,html,json,gql,graphql'",
     "fix": "yarn install; yarn run --silent format; yarn run --silent lint:fix",
-    "preinstall": "npx typesync || :"
+    "preinstall": "npx typesync || :",
+    "prepare": "npx simple-git-hooks || :"
   },
   "dependencies": {
     "react": "^18.2.0",
