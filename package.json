@@ -19,12 +19,17 @@
     "prepare": "npx simple-git-hooks || :"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.12.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.40.2",
     "@types/eslint-config-prettier": "^6.11.0",
+    "@types/lint-staged": "^13.2.0",
     "@types/prettier": "^2.7.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
