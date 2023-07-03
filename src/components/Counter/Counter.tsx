@@ -12,7 +12,9 @@ import {
 const Counter: FC = () => {
   const [count, setCount] = useState(0);
   const increment = () => {
-    setCount((c) => c + 1);
+    [...Array(3).keys()].forEach(() => {
+      setCount((c) => c + 1);
+    });
   };
   const reset = () => {
     setCount(0);
@@ -26,7 +28,7 @@ const Counter: FC = () => {
       </Stat>
       <ButtonGroup maxW="xs" m={2} variant="contained" isAttached>
         <Button w="xs" colorScheme="green" variant="solid" onClick={increment}>
-          +1
+          +3
         </Button>
         <Button w="xs" colorScheme="red" variant="solid" onClick={reset}>
           Reset
