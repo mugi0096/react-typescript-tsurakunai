@@ -4,6 +4,7 @@ import './App.css';
 
 import CharacterList from 'components/CharacterList/CharacterList';
 import { type Character } from 'components/CharacterList/CharacterList';
+import Counter from 'components/Counter/Counter';
 
 const App: FC = () => {
   const characters: Character[] = [
@@ -40,6 +41,7 @@ const App: FC = () => {
 
   return (
     <div className="App">
+      <Counter />
       <Heading size="lg" as="h1" my={12}>
         『SLAM DUNK』登場人物
       </Heading>
