@@ -5,6 +5,7 @@ import './App.css';
 import CharacterList from 'components/CharacterList/CharacterList';
 import { type Character } from 'components/CharacterList/CharacterList';
 import Counter from 'components/Counter/Counter';
+import RegistrationForm from 'components/Form/RegistrationForm';
 import Timer from 'components/Timer/Timer';
 
 const App: FC = () => {
@@ -42,6 +43,7 @@ const App: FC = () => {
 
   return (
     <div className="App">
+      <RegistrationForm />
       <Counter />
       <Timer />
       <Heading size="lg" as="h1" my={12}>
