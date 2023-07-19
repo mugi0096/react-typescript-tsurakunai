@@ -17,23 +17,23 @@ export const useTimer = (maxCount: number): [number, boolean, () => void] => {
       if (intervalId.current !== undefined) {
         clearInterval(intervalId.current);
       }
-      setTimeLeft(maxCount);
       intervalId.current = setInterval(tick, 1000);
+      setTimeLeft(maxCount);
     },
     [maxCount, tick]
   );
 
   useEffect(() => {
-    const timerId = setInterval(tick, 1000);
+    reset();
 
     return () => {
-      clearInterval(timerId);
+      clearInterval(intervalId.current);
     };
-  }, []);
+  }, [reset]);
 
   useEffect(() => {
     if (timeLeft === 0) reset();
-  }, [timeLeft, maxCount]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [timeLeft, reset]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return [timeLeft, primes.includes(timeLeft), reset];
 };
