@@ -6,6 +6,7 @@ import CharacterList from 'components/CharacterList/CharacterList';
 import { type Character } from 'components/CharacterList/CharacterList';
 import Counter from 'components/Counter/Counter';
 import RegistrationForm from 'components/Form/RegistrationForm';
+import CountdownTimer from 'components/Timer/CountdownTimer';
 import Timer from 'components/Timer/Timer';
 
 const App: FC = () => {
@@ -46,6 +47,7 @@ const App: FC = () => {
       <RegistrationForm />
       <Counter />
       <Timer />
+      <CountdownTimer />
       <Heading size="lg" as="h1" my={12}>
         『SLAM DUNK』登場人物
       </Heading>
